@@ -9,7 +9,7 @@ stage('SCM Checkout'){
    stage('Deploy to Tomcat'){
       
       sshagent(['Tomcat server deployment']) {
-         sh 'scp -o StrictHostKeyChecking=no target/*.war root@172.17.0.3:/usr/local/tomcat/webapps'
+         sh 'scp -o StrictHostKeyChecking=no target/*.war bikash@172.17.0.3:/usr/local/tomcat/webapps'
       }
    }
    
